@@ -25,6 +25,7 @@ repositories {
     maven { url "https://maven.tterrag.com/" }
     maven { url = "https://modmaven.dev/" }
     maven { url "https://minecraft.curseforge.com/api/maven/"}
+    maven { url = "https://maven.minecraftforge.net/" }
     maven {
         url "https://www.cursemaven.com"
         content {
@@ -34,7 +35,7 @@ repositories {
     maven { url "https://maven.blamejared.com/" }
     maven {
         name = "GHPCore"
-        url = uri("https://maven.pkg.github.com/p3pp3rf1y/sophisticatedcore")
+        url = uri("https://maven.pkg.github.com/daudeuf/sophisticatedcore")
         credentials {
             username = System.getenv("USERNAME")
             password = System.getenv("READ_PACKAGES_TOKEN")
@@ -45,7 +46,7 @@ repositories {
     }
     maven {
         name = "GHPBackpacks"
-        url = uri("https://maven.pkg.github.com/p3pp3rf1y/sophisticatedbackpacks")
+        url = uri("https://maven.pkg.github.com/daudeuf/sophisticatedbackpacks")
         credentials {
             username = System.getenv("USERNAME")
             password = System.getenv("READ_PACKAGES_TOKEN")
@@ -108,7 +109,7 @@ sourceSets.main.resources {
 }
 
 dependencies {
-    minecraft "net.neoforged:forge:${minecraft_version}-${neo_version}"
+    minecraft "net.minecraftforge:forge:${minecraft_version}-${neo_version}"
 
     compileOnly fg.deobf("mezz.jei:jei-${jei_mc_version}:${jei_version}")
     runtimeOnly fg.deobf("mezz.jei:jei-${jei_mc_version}:${jei_version}")
